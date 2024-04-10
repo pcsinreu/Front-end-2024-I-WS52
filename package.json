@@ -1,5 +1,5 @@
 {
-  "name": "learning--center-app",
+  "name": "learning-center-app",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -11,6 +11,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "primevue": "^3.51.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
