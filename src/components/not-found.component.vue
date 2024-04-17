@@ -1,10 +1,10 @@
 <template>
- <div>form book</div>
+ <div> not found</div>
 </template>
 
 <script>
 export default {
-    name: "form-book"
+    name: "not-found.component"
 }
 </script>
 
