@@ -14,8 +14,8 @@ export class UserApiService {
         return await http.post('users',body)
     }
     async update(body,id) {
-        return await http.post('users/'+id,body)
+        return await http.put('users/'+id,body)
     }    async delete(id) {
-        return await http.post('users/'+id)
+        return await http.delete('users/'+id)
     }
 }

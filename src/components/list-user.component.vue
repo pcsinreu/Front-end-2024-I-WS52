@@ -4,7 +4,7 @@
 
     <ul v-for="user in users">
       <li>{{ user.id + ' - ' + user.username }}</li>
-      <pv-button >Delete</pv-button>
+      <pv-button @click="deleteUser(user.id)" >Delete</pv-button>
     </ul>
   </div>
 </template>
@@ -22,10 +22,25 @@ export default {
     }
   },
   methods: {
+      async refresh(){
+          const responseGetALL = await  this.userApiService.getAll();
+          this.users = responseGetALL.data;
+      },
+      async deleteUser(id) {
+          const reponse = await this.userApiService.delete(id)
+
+          if( reponse.status === 200)
+          {
+              alert('user deleted')
+            this.refresh();
+          }
+          else{
+              alert('Error  deleting user')
+          }
+      }
   },
     async created() {
-        const response = await this.userApiService.getAll();// 10 min
-        this.users = response.data;
+        this.refresh();
     }
 }
 </script>
