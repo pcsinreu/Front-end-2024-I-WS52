@@ -1,13 +1,11 @@
 <template>
- <div> not found</div>
+  <label>Ruta no encontrada</label>
 </template>
 
 <script>
 export default {
-    name: "not-found.component"
+  name: 'not-found'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

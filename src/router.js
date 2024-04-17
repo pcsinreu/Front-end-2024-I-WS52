@@ -1,21 +1,19 @@
-import { createWebHistory, createRouter } from 'vue-router'
-import FormBookComponent from "@/components/form-book.component.vue";
-import FormBookBrandComponent from "@/components/form-book-brand.component.vue";
-import FormBookPricingComponent from "@/components/form-book-pricing.component.vue";
-import notFoundComponent from "@/components/not-found.component.vue";
-
-
+import MainLoginComponent from '@/components/main-login.component.vue'
+import ListUserComponent from '@/components/list-user.component.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import CreateUserComponent from '@/components/create-user.component.vue'
+import NotFoundComponent from '@/components/not-found.component.vue'
 
 const routes = [
-    { path: '/', component: FormBookComponent },
-    { path: '/brand', component: FormBookBrandComponent },
-    { path: '/princing', component: FormBookPricingComponent },
-    { path:  '/:pathMatch(.*)*', component: notFoundComponent }
+  { path: '/', component: MainLoginComponent },
+  { path: '/users', component: ListUserComponent },
+  { path: '/create-user', component: CreateUserComponent },
+  { path: '/:pathMatch(.*)*', component: NotFoundComponent }
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
+  history: createWebHistory(),
+  routes
 })
 
-export default router;
+export default router
