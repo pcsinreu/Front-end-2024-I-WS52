@@ -4,6 +4,8 @@
 
     <ul v-for="user in users">
       <li>{{ user.id + ' - ' + user.username }}</li>
+
+        <router-link :to="{ name: 'updateUser', params: { id: user.id } }">Edit</router-link>
       <pv-button @click="deleteUser(user.id)" >Delete</pv-button>
     </ul>
   </div>
